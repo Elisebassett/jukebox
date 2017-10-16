@@ -6,12 +6,35 @@
 		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<h1>Welcome to the Jukebox</h1>
-		
-		<button id="start">Play!!</button>
-		<button id="stop">Stop!</button>
-		<audio id="coldplay" src="in_my_place.mp3"></audio>
+		<div class="overlay"></div>
+			<h1>Welcome to the Jukebox</h1>
+	<!-- Play and Stop Buttons		 -->
+			<button id="start">Play!!</button>
+			<button id="pause">Pause</button>
+			<button id="stop">Stop!</button>
+			<audio src="songs/in_my_place.mp3"></audio>
+	<!-- Library -->
+			<h2>Select a Tune</h2>
 
+			<div class="gallery">
+				<div id="coldplay">
+					<img src="https://images-na.ssl-images-amazon.com/images/I/416uMqIWVCL.jpg">
+					<p>In My Place by Coldplay</p>
+				</div>
+				<div id="lighthouse">
+					<img src="http://digitalspyuk.cdnds.net/13/21/768x768/gallery_lucy-spraggan-lighthouse-single-art.jpg">
+					<p>Lighthouse by Lucy Spraggan</p>
+				</div>
+
+				<div id="sigur_ros">
+					<img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Takk.jpg">
+					<p>Glòsòsli by Sigur Ros</p>
+				</div>
+				<div id="arcade_fire">
+					<img src="http://cdn.albumstreams.com/artists/h/HerMovie/hercover.jpg">
+					<p>Photograph by Arcade Fire</p>
+				</div>
+			</div>
 		<script src="index.js"></script>
 	</body>
 </html>

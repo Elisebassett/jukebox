@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+	font-family: Futura;
+	padding: 20px;
+	background-image: url(https://images1.phoenixnewtimes.com/imager/u/original/9353734/diner50-010.jpg);
+}
+
+.overlay {
+	height: 600px;
+	width: 100%;
+	background-color: white;
+	opacity: 0.6;
+	position: absolute;
+	z-index: -4;
+}
+
+.gallery div {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	vertical-align: top;
+	border: solid 2px black;
+	margin: 10px;
+}
+
+img {
+	width: 100%;
+}	

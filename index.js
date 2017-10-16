@@ -5,32 +5,51 @@ class Jukebox {
 	playSong(){
 		this.audio.play();
 	}
-	stopSong(){
+	pauseSong(){
 		this.audio.pause();
 	}
 
-	loadSong(song){
-		audio.innertHTML();
+	stopSong(){
+		this.audio.load();
+	}
+
+	loadSong(n){
+		this.audio.setAttribute('src', n);
+		this.audio.load();
+		this.audio.play();
 	}
 }
 
-class Song {
-	constructor(name,artist,id){
-		this.name = name;
-		this.artist = artist;
-		this.id = document.getElementById(id);
-	}
-}
+var jukebox = new Jukebox();
 
-document.getElementById("start").addEventListener('click', function(){
+////Play and Stop Listeners////
+document.getElementById('start').addEventListener('click', function(){
 	jukebox.playSong();
 });
 
-document.getElementById("stop").addEventListener('click', function(){
-	jukebox.stopSong();
+document.getElementById('pause').addEventListener('click', function(){
+	jukebox.pauseSong();
 });
 
-var jukebox = new Jukebox();
-var coldplay = new Song("In My Place","Coldplay","coldplay");
-console.log(jukebox.songs);
+document.getElementById('stop').addEventListener('click', function(){
+	jukebox.stopSong();
+});
+/////
 
+source_array = ['songs/in_my_place.mp3','songs/lighthouse.mp3', 'songs/glosoli.mp3', 'songs/photograph.mp3']
+
+
+////Loading Listeners////
+document.getElementById('coldplay').addEventListener('click', function(){
+	jukebox.loadSong(source_array[0]);
+});
+document.getElementById('lighthouse').addEventListener('click', function(){
+	jukebox.loadSong(source_array[1]);
+});
+document.getElementById('sigur_ros').addEventListener('click', function(){
+	jukebox.loadSong(source_array[2]);
+});
+document.getElementById('arcade_fire').addEventListener('click', function(){
+	jukebox.loadSong(source_array[3]);
+});
+/////
